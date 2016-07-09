@@ -1,7 +1,5 @@
 package game;
 
-import game.main.Game;
-
 import org.lwjgl.opengl.Display;
 
 import display.DisplayManager;
