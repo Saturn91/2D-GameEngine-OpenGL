@@ -1,6 +1,7 @@
 package game.entities.costum;
 
 import game.entities.standart.Entity;
+import game.entities.standart.RawModel;
 
 import java.util.ArrayList;
 
@@ -15,6 +16,7 @@ public class GameObject {
 	private int layer;
 	private float renderLayer;
 	private static final float layerDistance = 0.01f;
+	private int textureID = -999;
 	
 	private String thisName;
 	
@@ -25,6 +27,19 @@ public class GameObject {
 			this.thisName = entityType;
 			this.layer = layer;
 			this.renderLayer = layer*layerDistance;
+		}else{
+			System.err.println("unknown Entity <" + entityType + ">!");
+		}
+	}
+	
+	public GameObject(String entityType, Vector2f position, float scale, int layer, int textureID) {
+		if(knownEntities.contains(entityType)){
+			this.scale = scale;
+			this.position = position;
+			this.thisName = entityType;
+			this.layer = layer;
+			this.renderLayer = layer*layerDistance;
+			this.textureID = textureID;
 		}else{
 			System.err.println("unknown Entity <" + entityType + ">!");
 		}
@@ -82,5 +97,17 @@ public class GameObject {
 	
 	public float getRenderLayer(){
 		return renderLayer;
+	}
+	
+	public void setTextureID(int id){
+		this.textureID = id;
+	}
+	
+	public int getTextureID(){
+		if(this.textureID == -999){
+			return getEntityByName(thisName).getModel().getTexture().getID();
+		}else{
+			return textureID;
+		}
 	}
 }

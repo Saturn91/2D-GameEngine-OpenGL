@@ -3,6 +3,7 @@ package game;
 import org.lwjgl.opengl.Display;
 
 import display.DisplayManager;
+import display.renderer.Loader;
 
 public class GameMainLoop {
 	public static final String GAME_TITLE = "GameEngine";
