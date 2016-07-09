@@ -3,7 +3,6 @@ package game;
 import game.entities.costum.GameObject;
 import game.entities.light.Light;
 import game.entities.standart.Camera;
-import game.entities.standart.Entity;
 import game.level.Map;
 
 import java.util.ArrayList;
