@@ -1,6 +1,5 @@
-package game.entities;
+package game.entities.standart;
 
-import game.entities.TexturedModel;
 
 public class Entity {
 	private TexturedModel model;

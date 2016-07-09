@@ -1,9 +1,9 @@
 package game.main;
 
-import game.entities.Camera;
-import game.entities.Entity;
-import game.entities.GameObject;
-import game.entities.Light;
+import game.entities.costum.GameObject;
+import game.entities.light.Light;
+import game.entities.standart.Camera;
+import game.entities.standart.Entity;
 import game.level.Map;
 
 import java.util.ArrayList;

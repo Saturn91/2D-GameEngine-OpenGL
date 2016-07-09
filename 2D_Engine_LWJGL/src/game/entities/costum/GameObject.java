@@ -1,4 +1,6 @@
-package game.entities;
+package game.entities.costum;
+
+import game.entities.standart.Entity;
 
 import java.util.ArrayList;
 

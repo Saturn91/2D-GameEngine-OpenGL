@@ -1,6 +1,6 @@
 package toolbox;
 
-import game.entities.Camera;
+import game.entities.standart.Camera;
 
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;

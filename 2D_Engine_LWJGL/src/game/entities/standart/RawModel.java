@@ -1,4 +1,4 @@
-package game.entities;
+package game.entities.standart;
 
 public class RawModel {
 	private int vaoID;

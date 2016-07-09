@@ -6,10 +6,10 @@ import org.newdawn.slick.opengl.Texture;
 import toolbox.Constants;
 import Textures.ModelTexture;
 import display.renderer.Loader;
-import game.entities.Entity;
-import game.entities.GameObject;
-import game.entities.RawModel;
-import game.entities.TexturedModel;
+import game.entities.costum.GameObject;
+import game.entities.standart.Entity;
+import game.entities.standart.RawModel;
+import game.entities.standart.TexturedModel;
 import game.main.Game;
 
 public class Map {

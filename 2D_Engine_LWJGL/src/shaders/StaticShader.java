@@ -1,8 +1,8 @@
 package shaders;
 
 import game.GameMainLoop;
-import game.entities.Camera;
-import game.entities.Light;
+import game.entities.light.Light;
+import game.entities.standart.Camera;
 
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;

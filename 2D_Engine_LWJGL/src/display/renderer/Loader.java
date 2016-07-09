@@ -6,7 +6,7 @@
 
 package display.renderer;
 
-import game.entities.RawModel;
+import game.entities.standart.RawModel;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

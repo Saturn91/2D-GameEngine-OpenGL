@@ -1,8 +1,8 @@
 package display.renderer;
 
-import game.entities.GameObject;
-import game.entities.RawModel;
-import game.entities.TexturedModel;
+import game.entities.costum.GameObject;
+import game.entities.standart.RawModel;
+import game.entities.standart.TexturedModel;
 
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.GL11;
