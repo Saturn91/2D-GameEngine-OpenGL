@@ -101,7 +101,6 @@ vec3 calculatePointLights(){
 		if(length(lightResult)>0){
 			function_output += lightResult;
 		}
-		
 	}
 	return function_output;
 }
