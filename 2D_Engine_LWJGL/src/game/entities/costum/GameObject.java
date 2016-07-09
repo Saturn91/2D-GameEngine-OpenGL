@@ -30,6 +30,10 @@ public class GameObject {
 		}
 	}
 	
+	public static boolean checkExisting(String name){
+		return knownEntities.contains(name);
+	}
+	
 	public static boolean addEntity(String name, Entity entity){
 		if(!knownEntities.contains(name)){
 			entities.add(entity);

@@ -26,9 +26,9 @@ import org.newdawn.slick.opengl.TextureLoader;
 
 public class Loader {
 	
-	private List<Integer> vaos = new ArrayList<>();
-	private List<Integer> vbos = new ArrayList<>();
-	private List<Integer> textures = new ArrayList<>();
+	private static List<Integer> vaos = new ArrayList<>();
+	private static List<Integer> vbos = new ArrayList<>();
+	private static List<Integer> textures = new ArrayList<>();
 	
 	public RawModel loadToVAO(float[] positions, float[] textureChoords, int[] indices){
 		int vaoID = createVAO();
@@ -39,15 +39,15 @@ public class Loader {
 		return new RawModel(vaoID, indices.length);
 	}
 	
-	public int loadTexture(String fileName){
+	public int loadTexture(String filePath){
 		Texture texture = null;
 		try {
-			texture = TextureLoader.getTexture("PNG", new FileInputStream("res/"+fileName + ".png"));
+			texture = TextureLoader.getTexture("PNG", new FileInputStream("res/"+filePath + ".png"));
 		} catch (FileNotFoundException e) {
-			System.err.println("Loader: not able to load: " + "res/"+fileName + ".png");
+			System.err.println("Loader: not able to load: " + "res/"+filePath + ".png");
 			e.printStackTrace();
 		} catch (IOException e) {
-			System.err.println("Loader: not able to load: " + "res/"+fileName + ".png");
+			System.err.println("Loader: not able to load: " + "res/"+filePath + ".png");
 			e.printStackTrace();
 		}
 		int textureID = texture.getTextureID();

@@ -37,11 +37,6 @@ public class Map {
 				GameObject gameObject = new GameObject("wall", new Vector2f(x, y), 1.0f, 0);
 				Game.addEntity(gameObject);
 			}
-		}
-		
-		/*
-		 * Attention! the order of rendering is very importent
-		 */
-		
+		}		
 	}
 }
