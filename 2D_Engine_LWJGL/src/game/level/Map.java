@@ -18,12 +18,11 @@ public class Map {
 	public Map() {
 		
 		TileSet tileset = new TileSet("Standart", "TestTileSet", 32, 32);
-		
-		
+		Loader loader = new Loader();
 		
 		for(int x = 0; x < 25; x++){
 			for(int y = 0; y < 25; y++){
-				Game.addEntity(tileset.getTile(1, 1, new Vector2f(x, y), 1, 1));
+				Game.addEntity(tileset.getTile(0, 1, new Vector2f(x, y), 1, 1));
 			}
 		}		
 	}

@@ -1,5 +1,9 @@
 package display.renderer;
 
+import static org.lwjgl.opengl.GL11.GL_BLEND;
+import static org.lwjgl.opengl.GL11.GL_PROJECTION;
+import static org.lwjgl.opengl.GL11.glEnable;
+import static org.lwjgl.opengl.GL11.glMatrixMode;
 import game.entities.costum.GameObject;
 import game.entities.standart.RawModel;
 import game.entities.standart.TexturedModel;
@@ -51,6 +55,8 @@ public Renderer(StaticShader shader) {
 				gameobject.getRotZ(), gameobject.getScale());	
 		shader.loadTransformationMatrix(transformationMatrix);
 		GL13.glActiveTexture(GL13.GL_TEXTURE0);	//Activate Texture on Texture0 wich is de default of Texturesampler in fragmentshader!
+		GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
+		GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
 		GL11.glBindTexture(GL11.GL_TEXTURE_2D, gameobject.getTextureID());
 		GL11.glDrawElements(GL11.GL_TRIANGLES, rawModel.getVertexCount(), GL11.GL_UNSIGNED_INT, 0);
 		GL20.glDisableVertexAttribArray(0);		
