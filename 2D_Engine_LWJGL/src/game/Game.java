@@ -70,7 +70,7 @@ public class Game {
 	public void init(){
 		gameObjects = new ArrayList<>();
 		shader = new StaticShader();
-		shader.setEnviromentLight(new Vector3f(0.2f,0.01f,0.2f));
+		shader.setEnviromentLight(new Vector3f(0.05f,0.02f,0.05f));
 		Light light = new Light(new Vector2f(0,0), new Vector3f(0.8f, 0.6f, 0.8f));
 		shader.configureCameraLight(light);
 		shader.setPointLights(generateLights());
